@@ -50,7 +50,7 @@ public:
     int alt(int x, int y);                          // Return altitude data for specific coordinates
     int alt(Point const& v);
     void outputStats();                             // Report access statistics to std. output
-    bool validCoords(Point p) const;                // Verify that the given coordinates are within bounds
+    bool legalne_suradnice(Point p) const;                // Verify that the given coordinates are within bounds
     const int nx; const int ny;
 private:
     Matrix<int> altitude;

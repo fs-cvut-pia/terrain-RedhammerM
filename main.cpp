@@ -31,10 +31,14 @@ int main(int argc, char *argv[]) {
     // Load the coordinates of the start and end points
 
     Point start = read_coordinates(argc,argv,2);
-    Point finish = read_coordinates(argc,argv,4);
+    Point ciel = read_coordinates(argc,argv,4);
 
-    std::vector<Path*> paths = { //new YourPath(m,"MyPathName",start,finish), ...
-        // Here add the list of dynamically created classes with path finding algorithms
+    std::vector<Path*> paths = {
+        new lietadlo(m, start, ciel),
+        new lod(m, start, ciel),
+        new cesta(m, start, ciel),
+        new trajekt(m, start, ciel),
+        new vlak(m, start, ciel)
     };
 
     for (auto& p : paths) {
