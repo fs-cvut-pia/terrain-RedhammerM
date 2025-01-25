@@ -51,7 +51,7 @@ void TerrainMap::outputStats() {
     }
 }
 
-bool TerrainMap::validCoords(Point p) const {
+bool TerrainMap::legalne_suradnice(Point p) const {
     if (p.x >= 0 && p.x < nx && p.y >= 0 && p.y < ny) return true;
     else return false;
 }
